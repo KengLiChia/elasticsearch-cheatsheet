@@ -60,7 +60,7 @@ GET name-of-index/_search
 {
   "query": {
     "match": {
-        "enter category": Enter the category value e.g. ENTERTAINMENT
+        "Enter category": Enter the category value e.g. ENTERTAINMENT
       }
     },
     "aggs": {
