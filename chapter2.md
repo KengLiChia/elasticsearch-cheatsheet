@@ -1,5 +1,5 @@
 # Chapter 2
-Topics overed as follows:
+Topics covered as follows:
 -  Basics on queries and aggregations
 
 ## Queries 
