@@ -41,8 +41,7 @@ PUT name-of-index/_create/id-you-want-to-assign
   "field": "value"
 }
 ```
-Prompts if there is an existing when create as compared to _doc.
-
+This API prompts if a document with the same ID already exists, compared to _doc.
 ### READ
 ### Read Document
 ```
@@ -54,12 +53,12 @@ GET name-of-index/_doc/id-you-want-to-read
 POST name-of-index/_doc/id-you-want-to-update
 {
   "doc":{
-    "field": "value"
-    "field": "value"
+    "field": "new-value"
+    "field": "new-value"
   }
 }
 ```
 ### DELETE
 ### Delete Document
 ```
-DELETE name-of-index/_doc/id-you-want-delete
+DELETE name-of-index/_doc/id-you-want-to-delete
