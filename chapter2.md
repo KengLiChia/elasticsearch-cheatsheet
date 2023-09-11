@@ -24,8 +24,8 @@ GET name-of-index/_search
 ```
 GET name-of-index/_search
 {
-  "query" {
-    "range" {
+  "query": {
+    "range": {
       "field" {
         "gte": "2023/09/07",
         "lte": "2023/09/08",
