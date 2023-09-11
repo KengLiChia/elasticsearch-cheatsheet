@@ -26,7 +26,7 @@ GET name-of-index/_search
 {
   "query": {
     "range": {
-      "field" {
+      "field: {
         "gte": "2023/09/07",
         "lte": "2023/09/08",
         }
@@ -45,8 +45,8 @@ GET name-of-index/_search
   "aggs": {
       "aggs-name": {
         "terms": {
-            "field": "field-name"
-            "size": indicate how many buckets you want to returned here
+            "field": Name the field you want to aggregate here
+            "size": Indicate how many buckets you want to returned here
           }
         }
     }
@@ -60,19 +60,19 @@ GET name-of-index/_search
 {
   "query": {
     "match": {
-      "field": {
-        "query": enter the field name
+        "enter category": Enter the category value e.g. ENTERTAINMENT
       }
     },
     "aggs": {
       "aggs-name": {
-        "significant_text": {
-            "field": enter the name of field you searching for
+        "significant_text": { 
+            "field": Enter the name of field you searching for e.g. headline
           }
         }
     }
 }
 ```
+The above would search for headlines that are under category.
 
 ### Increase Precision   
 ```
@@ -80,15 +80,14 @@ GET name-of-index/_search
 {
   "query": {
     "match": {
-      "field": {
-        "query": enter search terms,
-        "operator": "and"
+      "Enter the field you want to search": {
+        "query": Enter search terms
+        "operator": "and" // Use "and" for precision or "or" for broader results
       }
     }
   }
 }
-```
-By default, the match query uses an "OR" logic. Thus, to increase precision we use AND operator.        
+``        
 ```
 GET name-of-index/_search
 {
@@ -96,7 +95,7 @@ GET name-of-index/_search
     "match": {
       "field": {
         "query": enter search terms,
-        "minimum_should_match": enter number
+        "minimum_should_match": 2
         }
       }
   }
